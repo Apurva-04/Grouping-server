@@ -5,10 +5,10 @@ const groupSchema = mongoose.Schema({
   	type: String,
   	required: true 
   },
- start_date: {
+ lower_date: {
     type: Date
   },
-  end_date: {
+  upper_date: {
     type: Date
   },
   lower_age: {
@@ -16,9 +16,6 @@ const groupSchema = mongoose.Schema({
   },
   upper_age: {
     type: Number
-  },
-  interests: {
-    type: Array
   },
   lower_budget: {
     type: Number 

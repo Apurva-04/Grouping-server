@@ -29,8 +29,8 @@ export const getGroups = async (req, res) => {
 
 export const createGroup = async (req, res) => {
     try {
-        const {place, start_date, end_date, lower_budget, upper_budget} = req.body;
-        const newgroup = new Groups({ place: place});
+        const {place, lower_date, upper_date, lower_age, upper_age, lower_budget, upper_budget} = req.body;
+        const newgroup = new Groups({ place: place, lower_date: lower_date, upper_date: upper_date, lower_age: lower_age, upper_age:upper_age, lower_budget:lower_budget, upper_budget:upper_budget});
         await newgroup.save();
         res.status(201).json(newgroup);
     } catch (error) {
